@@ -1,0 +1,14 @@
+#users-new-container
+  h1 New User
+
+  = simple_form_for @user do |f|  
+    .row
+      = f.input :first_name, wrapper_html: { class: 'm6 s12' }
+      = f.input :last_name,  wrapper_html: { class: 'm6 s12' }
+    .row
+      = f.input :gender,     wrapper_html: { class: 'm6 s12' }
+      = f.input :is_student, as: :radio_buttons, wrapper_html: { class: 'm6 s12' }
+    .row
+      = f.input :avatar, wrapper_html: { class: 'm6 s12' }
+
+    = f.button :submit
